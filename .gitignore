@@ -1,0 +1,8 @@
+# ignore db
+db.sqlite3
+
+# ignore vscode settings and configs
+.vscode/
+
+# ignore env file
+.env
