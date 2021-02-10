@@ -9,3 +9,7 @@ db.sqlite3
 
 # ignore python caches
 __pycache__/
+
+# ignore collected static files directory
+statics/
+
