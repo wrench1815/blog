@@ -1,14 +1,17 @@
+{% load static %}
 <!-- ******************************************
 *  Author : Hardeep Kumar   
-*  Created On : Thu Feb 04 2021
+*  Created On : Fri Feb 05 2021
 *  File : base.html
 ******************************************* -->
 
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Hardeep Kumar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -24,109 +27,83 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css"
       rel="stylesheet"
     />
-    <title>Home</title>
+    <!-- additional css -->
+    <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet" />
+
+    <title>wrench-log</title>
   </head>
 
-  <body class="bg-light d-flex flex-column h-100">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <!-- Container wrapper -->
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="{% url 'home' %}">Blog</a>
+  <body>
+    <div class="container mt-4 fixed-top">
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white border"
+        style="border-radius: 1.8rem;"
+      >
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="#">Wrench-log</a>
 
-        <!-- Toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
 
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left links -->
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contactMe' %}">Contact</a>
-            </li>
-          </ul>
-          <!-- Left links -->
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <!-- Left links -->
 
-          <!-- Search form -->
-          <!-- <form class="d-flex input-group w-auto">
-            <input
-              type="search"
-              class="form-control"
-              placeholder="Type query"
-              aria-label="Search"
-            />
-            <button
-              class="btn btn-outline-primary"
-              type="button"
-              data-mdb-ripple-color="dark"
-            >
-              Search
-            </button>
-          </form>
-        </div> -->
-        <!-- Collapsible wrapper -->
-      </div>
-      <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
+            <!-- Search form -->
+            <!--<form class="d-flex input-group w-auto">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Type query"
+                aria-label="Search"
+              />-->
+              <button
+                class="btn btn-outline-primary me-3"
+                type="button"
+                data-mdb-ripple-color="dark"
+              >
+                button
+              </button>
+            </form>
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+    </div>
+    <!-- <div class="container-fluid mt-5 pt-5"> -->
+      {% block PAGE_CONTENT %} {% endblock PAGE_CONTENT %}
+    
 
-    {% block PAGE_CONTENT %} {% endblock PAGE_CONTENT %}
-
-    <footer class="bg-white text-center text-lg-left p-3 mt-auto shadow-3">
-      <!-- Social -->
-      <div class="d-flex justify-content-center mt-1 mb-2">
-        <a
-          class="btn btn-dark btn-floating shadow-2-strong m-1"
-          style="background-color: #333"
-          href="https://github.com/wrench1815"
-          target="_blank"
-          ><i class="fab fa-github fa-lg"></i
-        ></a>
-        <a
-          class="btn btn-primary btn-floating shadow-2-strong m-1"
-          style="background-color: #4267b2"
-          href="https://www.facebook.com/HardeepKumar1815/"
-          target="_blank"
-          ><i class="fab fa-facebook-f fa-lg"></i
-        ></a>
-        <a
-          class="btn btn-info btn-floating shadow-2-strong m-1"
-          style="background-color: #1da1f2"
-          href="https://twitter.com/wrench1815"
-          target="_blank"
-          ><i class="fab fa-twitter fa-lg"></i
-        ></a>
-        <a
-          class="btn btn-danger btn-floating shadow-2-strong m-1"
-          style="background-color: #fb3958"
-          href="https://instagram.com/wrench1815"
-          target="_blank"
-          ><i class="fab fa-instagram fa-lg"></i
-        ></a>
-      </div>
-      <!-- Copyright -->
-      <div class="text-center">© 2021 Copyright: wrench1815</div>
-      <div class="text-center">
-        made with <i class="fas fa-heart text-danger"></i> and Django
-      </div>
-    </footer>
     <!-- MDB -->
     <script
       type="text/javascript"
