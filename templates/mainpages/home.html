@@ -3,24 +3,20 @@
 <!-- Content Block -->
 {% block PAGE_CONTENT %}
 
-<div
-  class="p-5 bg-black bg-image"
-  style="
-    background-image: url('https://source.unsplash.com/600x400/?coding');
-    height: 100vh;
-  "
->
-  <div
-    class="h-100"
-    style="background-color: rgba(255, 255, 255, 0.4); border-radius: 16px"
-  >
-    <h1 class="text-center">Home</h1>
+<div class="pt-5 container-fluid">
+  <div class="container-fluid" style="margin-top: 3.5rem">
+    <div class="d-flex justify-content-center">
+      <lottie-player
+        class="ms-auto w-responsive"
+        src="https://assets4.lottiefiles.com/packages/lf20_OmysYw.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+    <h1 class="text-center">Welcome Traveller!</h1>
   </div>
-</div>
-<div>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, vitae
-  aspernatur illo consectetur sapiente ad perspiciatis quidem maxime deserunt
-  iure qui modi quas, a non! Dolorum laudantium a alias consequuntur!
 </div>
 {% endblock PAGE_CONTENT %}
 <!-- style="background-image: url('https://source.unsplash.com/600x400/?code')" -->
