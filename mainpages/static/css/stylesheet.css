@@ -30,6 +30,7 @@
   * Blush Beige: #edd5c7 
   * Pastel Pink: #f2ad9a
   * English Voilet: #54395b
+  * Ultra Red: #f66d83
 
 */
 
@@ -37,6 +38,7 @@
   --blush-beige: #edd5c7;
   --pastel-pink: #f2ad9a;
   --english-voilet: #54395b;
+  --ultra-red: #f66d83;
 }
 
 /* Custom Colors bg */
@@ -52,6 +54,10 @@
   background-color: var(--english-voilet) !important;
 }
 
+.bg-ultra-red {
+  background-color: var(--ultra-red) !important;
+}
+
 /* Custom Colors Text */
 .text-blush-beige {
   color: var(--blush-beige) !important;
@@ -63,6 +69,31 @@
 
 .text-english-voilet {
   color: var(--english-voilet) !important;
+}
+
+.text-ultra-red {
+  color: var(--ultra-red) !important;
+}
+
+/* Custom Colors Buttons */
+.button-blush-beige {
+  color: var(--blush-beige) !important;
+  border-color: var(--blush-beige) !important;
+}
+
+.button-pastel-pink {
+  color: var(--pastel-pink) !important;
+  border-color: var(--pastel-pink) !important;
+}
+
+.button-english-voilet {
+  color: var(--english-voilet) !important;
+  border-color: var(--english-voilet) !important;
+}
+
+.button-ultra-red {
+  color: var(--ultra-red) !important;
+  border-color: var(--ultra-red) !important;
 }
 
 /* Custom Navbar */
