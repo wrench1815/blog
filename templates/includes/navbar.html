@@ -3,7 +3,9 @@
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Navbar brand -->
-    <a class="navbar-brand text-danger text-english-voilet" href="#"
+    <a
+      class="navbar-brand text-danger text-english-voilet"
+      href="{% url 'home' %}"
       >Wrench-log</a
     >
 
@@ -25,7 +27,10 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-english-voilet" aria-current="page" href="#"
+          <a
+            class="nav-link text-english-voilet"
+            aria-current="page"
+            href="{% url 'home' %}"
             >Home</a
           >
         </li>
@@ -33,10 +38,14 @@
           <a class="nav-link text-english-voilet" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="#">Contact</a>
+          <a class="nav-link text-english-voilet" href="{% url 'contactMe' %}"
+            >Contact</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="#">About</a>
+          <a class="nav-link text-english-voilet" href="{% url 'about' %}"
+            >About</a
+          >
         </li>
       </ul>
       <!-- Left links -->
@@ -50,8 +59,7 @@
                 aria-label="Search"
               />-->
       <button
-        class="btn btn-outline-primary me-3"
-        style="color: #f66d83; border-color: #f66d83"
+        class="btn btn-outline-primary me-3 button-ultra-red"
         type="button"
         data-mdb-ripple-color="dark"
       >
