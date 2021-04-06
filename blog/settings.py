@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.getenv('HOST_1'), os.getenv('HOST_2'), os.getenv('HOST_3')]
+ALLOWED_HOSTS = ['wrenchlog.herokuapp.com', '127.0.0.1', 'localhost']
 
 # Application definition
 
