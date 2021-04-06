@@ -31,7 +31,6 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [os.getenv('HOST_1'), os.getenv('HOST_2'), os.getenv('HOST_3')]
-print(ALLOWED_HOSTS)
 
 # Application definition
 
