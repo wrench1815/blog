@@ -5,12 +5,22 @@
 <!-- Content Block -->
 {% block PAGE_CONTENT %}
 
-<div class="pt-5 container-fluid">
-  <div class="container-fluid" style="margin-top: 3.5rem">
-    <div class="d-flex justify-content-center">
-      <img class="img-fluid" src="{% static '' %}" alt="" />
+<div
+  class="pt-5 bg-image container-fluid"
+  style="
+    background-image: url('{% static 'images/floating-islands.jpg' %}');
+    height: 100vh;
+  "
+>
+  <div class="mask" style="background-color: rgba(1, 22, 39, 0.3)">
+    <div
+      class="container-fluid d-flex align-items-center justify-content-center h-100"
+      style="margin-top: 3.5rem"
+    >
+      <div class="d-flex justify-content-center">
+        <h1 class="text-fogra">Welcome Traveller!</h1>
+      </div>
     </div>
-    <h1 class="text-center">Welcome Traveller!</h1>
   </div>
 </div>
 {% endblock PAGE_CONTENT %}
