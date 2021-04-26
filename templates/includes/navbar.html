@@ -1,15 +1,11 @@
 {% load static %}
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-blush-beige custom-nav">
+<nav class="navbar navbar-expand-lg navbar-light bg-baby-powder custom-nav">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Navbar brand -->
-    <a
-      class="navbar-brand text-danger text-english-voilet"
-      href="{% url 'home' %}"
-      >Wrench-log</a
-    >
+    <a class="navbar-brand text-fogra" href="{% url 'home' %}">Wrench-log</a>
 
     <!-- Toggle button -->
     <button
@@ -30,24 +26,22 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
-            class="nav-link text-english-voilet"
+            class="nav-link text-fogra"
             aria-current="page"
             href="{% url 'home' %}"
             >Home</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="#">Blog</a>
+          <a class="nav-link text-fogra" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="{% url 'contactMe' %}"
+          <a class="nav-link text-fogra" href="{% url 'contactMe' %}"
             >Contact</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="{% url 'about' %}"
-            >About</a
-          >
+          <a class="nav-link text-fogra" href="{% url 'about' %}">About</a>
         </li>
       </ul>
       <!-- Left links -->
@@ -60,13 +54,15 @@
                 placeholder="Type query"
                 aria-label="Search"
               />-->
-      <button
-        class="btn btn-outline-primary me-3 button-ultra-red"
-        type="button"
+
+      <a
+        class="btn btn-outline-primary me-3 button-rose-madder"
         data-mdb-ripple-color="dark"
+        href="{{ AdminSite.site_url }}/admin"
       >
-        login
-      </button>
+        Admin
+      </a>
+
       <!--</form>-->
     </div>
     <!-- Collapsible wrapper -->

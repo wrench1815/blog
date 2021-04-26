@@ -27,77 +27,92 @@
 /* Custom Colors */
 /* 
   ? Names
-  * Blush Beige: #edd5c7 
-  * Pastel Pink: #f2ad9a
-  * English Voilet: #54395b
-  * Ultra Red: #f66d83
+  * Baby Powder: #fdfffc
+  * Rich Black FOGRA 29: #011627
+  * Tiffany Blue: #2ec4b6
+  * Rose Madder: #e71d36
+  * Orange Peel: #ff9f1c
 
 */
 
 :root {
-  --blush-beige: #edd5c7;
-  --pastel-pink: #f2ad9a;
-  --english-voilet: #54395b;
-  --ultra-red: #f66d83;
+  --baby-powder: #fdfffc;
+  --fogra: #011627;
+  --tiffany-blue: #2ec4b6;
+  --rose-madder: #e71d36;
+  --orange-peel: #ff9f1c;
 }
 
 /* Custom Colors bg */
-.bg-blush-beige {
-  background-color: var(--blush-beige) !important;
+.bg-baby-powder {
+  background-color: var(--baby-powder) !important;
 }
 
-.bg-pastel-pink {
-  background-color: var(--pastel-pink) !important;
+.bg-fogra {
+  background-color: var(--fogra) !important;
 }
 
-.bg-english-voilet {
-  background-color: var(--english-voilet) !important;
+.bg-tiffany-blue {
+  background-color: var(--tiffany-blue) !important;
 }
 
-.bg-ultra-red {
-  background-color: var(--ultra-red) !important;
+.bg-rose-madder {
+  background-color: var(--rose-madder) !important;
+}
+
+.bg-orange-peel {
+  background-color: var(--orange-peel) !important;
 }
 
 /* Custom Colors Text */
-.text-blush-beige {
-  color: var(--blush-beige) !important;
+.text-baby-powder {
+  color: var(--baby-powder) !important;
 }
 
-.text-pastel-pink {
-  color: var(--pastel-pink) !important;
+.text-fogra {
+  color: var(--fogra) !important;
 }
 
-.text-english-voilet {
-  color: var(--english-voilet) !important;
+.text-tiffany-blue {
+  color: var(--tiffany-blue) !important;
 }
 
-.text-ultra-red {
-  color: var(--ultra-red) !important;
+.text-rose-madder {
+  color: var(--rose-madder) !important;
+}
+
+.text-orange-peel {
+  color: var(--orange-peel) !important;
 }
 
 /* Custom Colors Buttons */
-.button-blush-beige {
-  color: var(--blush-beige) !important;
-  border-color: var(--blush-beige) !important;
+.button-baby-powder {
+  color: var(--baby-powder) !important;
+  border-color: var(--baby-powder) !important;
 }
 
-.button-pastel-pink {
-  color: var(--pastel-pink) !important;
-  border-color: var(--pastel-pink) !important;
+.button-fogra {
+  color: var(--fogra) !important;
+  border-color: var(--fogra) !important;
 }
 
-.button-english-voilet {
-  color: var(--english-voilet) !important;
-  border-color: var(--english-voilet) !important;
+.button-tiffany-blue {
+  color: var(--tiffany-blue) !important;
+  border-color: var(--tiffany-blue) !important;
 }
 
-.button-ultra-red {
-  color: var(--ultra-red) !important;
-  border-color: var(--ultra-red) !important;
+.button-rose-madder {
+  color: var(--rose-madder) !important;
+  border-color: var(--rose-madder) !important;
+}
+
+.button-orange-peel {
+  color: var(--orange-peel) !important;
+  border-color: var(--orange-peel) !important;
 }
 
 /* Custom Navbar */
 .custom-nav {
   border-radius: 0.5rem 1rem;
-  border: 0.2rem solid var(--pastel-pink);
+  border: 0.2rem solid var(--tiffany-blue);
 }
