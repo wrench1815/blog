@@ -27,6 +27,11 @@
 /* Custom Colors */
 /* 
   ? Names
+  * Blush Beige: #edd5c7 
+  * Pastel Pink: #f2ad9a
+  * English Voilet: #54395b
+  * Ultra Red: #f66d83
+
   * Baby Powder: #fdfffc
   * Rich Black FOGRA 29: #011627
   * Tiffany Blue: #2ec4b6
@@ -41,9 +46,31 @@
   --tiffany-blue: #2ec4b6;
   --rose-madder: #e71d36;
   --orange-peel: #ff9f1c;
+
+  --blush-beige: #edd5c7;
+  --pastel-pink: #f2ad9a;
+  --english-voilet: #54395b;
+  --ultra-red: #f66d83;
 }
 
 /* Custom Colors bg */
+
+.bg-blush-beige {
+  background-color: var(--blush-beige) !important;
+}
+
+.bg-pastel-pink {
+  background-color: var(--pastel-pink) !important;
+}
+
+.bg-english-voilet {
+  background-color: var(--english-voilet) !important;
+}
+
+.bg-ultra-red {
+  background-color: var(--ultra-red) !important;
+}
+
 .bg-baby-powder {
   background-color: var(--baby-powder) !important;
 }
@@ -65,6 +92,23 @@
 }
 
 /* Custom Colors Text */
+
+.text-blush-beige {
+  color: var(--blush-beige) !important;
+}
+
+.text-pastel-pink {
+  color: var(--pastel-pink) !important;
+}
+
+.text-english-voilet {
+  color: var(--english-voilet) !important;
+}
+
+.text-ultra-red {
+  color: var(--ultra-red) !important;
+}
+
 .text-baby-powder {
   color: var(--baby-powder) !important;
 }
@@ -86,6 +130,27 @@
 }
 
 /* Custom Colors Buttons */
+
+.button-blush-beige {
+  color: var(--blush-beige) !important;
+  border-color: var(--blush-beige) !important;
+}
+
+.button-pastel-pink {
+  color: var(--pastel-pink) !important;
+  border-color: var(--pastel-pink) !important;
+}
+
+.button-english-voilet {
+  color: var(--english-voilet) !important;
+  border-color: var(--english-voilet) !important;
+}
+
+.button-ultra-red {
+  color: var(--ultra-red) !important;
+  border-color: var(--ultra-red) !important;
+}
+
 .button-baby-powder {
   color: var(--baby-powder) !important;
   border-color: var(--baby-powder) !important;
