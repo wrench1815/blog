@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['wrenchlog.herokuapp.com', '127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'mainpages.apps.MainpagesConfig',
+    'blogs.apps.BlogsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
