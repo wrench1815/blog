@@ -190,7 +190,7 @@ JAZZMIN_SETTINGS = {
     # Whether to display the side menu
     "show_sidebar": True,
 
-    # Whether to aut expand the menu
+    # Whether to auto expand the menu
     "navigation_expanded": True,
 
     # Hide these apps when generating side menu e.g (auth)
@@ -201,6 +201,14 @@ JAZZMIN_SETTINGS = {
 
     # Just make sure auth is first
     "order_with_respect_to": ["auth"],
+
+    # Custom icons for side menu apps/models
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "Blogs.Post": "fas fa-edit",
+    },
 
     #############
     # UI Tweaks #
