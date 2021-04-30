@@ -207,7 +207,8 @@ JAZZMIN_SETTINGS = {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
-        "Blogs.Post": "fas fa-edit",
+        "Blogs": "far fa-file",
+        "Blogs.Post": "fas fa-pen-nib",
     },
 
     #############
