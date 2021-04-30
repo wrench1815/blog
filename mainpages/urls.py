@@ -7,4 +7,4 @@ urlpatterns = [
     path('', home, name='home'),
     path('contact/', contactMe, name='contactMe'),
     path('about/', about, name='about'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
