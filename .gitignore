@@ -13,3 +13,5 @@ __pycache__/
 # ignore collected static files directory
 statics/
 
+# ignored images folder from media
+featured_images/
