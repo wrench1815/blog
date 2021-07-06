@@ -181,3 +181,20 @@
   border-radius: 0.5rem 1rem;
   border: 0.2rem solid var(--pastel-pink);
 }
+
+/* Social Colors */
+.github-text-color {
+  color: #333 !important;
+}
+
+.discord-text-color {
+  color: #7289da !important;
+}
+
+.twitter-text-color {
+  color: #1da1f2 !important;
+}
+
+.ig-text-color {
+  color: #fb3958 !important;
+}
