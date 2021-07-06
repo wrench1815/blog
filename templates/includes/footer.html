@@ -1,41 +1,75 @@
 {% load static %}
 
-<footer class="bg-pastel-pink text-center p-3">
-  <!-- Social -->
-  <div class="d-flex justify-content-center mt-1 mb-2">
-    <a
-      class="btn btn-dark btn-floating m-1"
-      style="background-color: #333"
-      href="https://github.com/wrench1815"
-      target="_blank"
-      ><i class="fab fa-github fa-lg"></i
-    ></a>
-    <a
-      class="btn btn-dark btn-floating shadow-2-strong m-1"
-      style="background-color: #7289da"
-      href="https://discordapp.com/users/457360898122711041"
-      target="_blank"
-      ><i class="fab fa-discord" style="font-size: 18px"></i
-    ></a>
-    <a
-      class="btn btn-info btn-floating shadow-2-strong m-1"
-      style="background-color: #1da1f2"
-      href="https://twitter.com/wrench1815"
-      target="_blank"
-      ><i class="fab fa-twitter fa-lg"></i
-    ></a>
-    <a
-      class="btn btn-danger btn-floating shadow-2-strong m-1"
-      style="background-color: #fb3958"
-      href="https://instagram.com/wrench1815"
-      target="_blank"
-      ><i class="fab fa-instagram fa-lg"></i
-    ></a>
+<!-- Footer -->
+<footer class="footer pt-5 mt-5">
+  <hr class="horizontal dark mb-5" />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4 ms-auto">
+        <div>
+          <h6 class="text-gradient text-primary font-weight-bolder">
+            Wrench-log
+          </h6>
+        </div>
+        <div>
+          <h6 class="mt-3 mb-2 opacity-8">Social</h6>
+          <ul class="d-flex flex-row ms-n3 nav">
+            <li class="nav-item">
+              <a
+                class="nav-link pe-1 github-text-color"
+                href="https://github.com/wrench1815"
+                target="_blank"
+              >
+                <i class="fab fa-github text-lg opacity-8"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link pe-1 twitter-text-color"
+                href="https://twitter.com/wrench1815"
+                target="_blank"
+              >
+                <i class="fab fa-twitter text-lg opacity-8"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link pe-1 discord-text-color"
+                href="https://discordapp.com/users/457360898122711041"
+                target="_blank"
+              >
+                <i class="fab fa-discord text-lg opacity-8"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link pe-1 ig-text-color"
+                href="https://instagram.com/wrench1815"
+                target="_blank"
+              >
+                <i class="fab fa-instagram text-lg opacity-8"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6 col-6 mb-4"></div>
+      <div class="col-md-2 col-sm-6 col-6 mb-4"></div>
+      <div class="col-md-2 col-sm-6 col-6 mb-4"></div>
+      <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto"></div>
+      <div class="col-12">
+        <div class="text-center">
+          <p class="my-4 text-sm">
+            All rights reserved. Copyright ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            <span class="text-bolder">Wrench1815</span>.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- Copyright -->
-  <div class="text-center">© 2021 Copyright: wrench1815</div>
-  <div class="text-center">
-    made with <i class="fas fa-heart text-danger"></i> and Django
-  </div>
-  <!-- Copyright -->
 </footer>
+<!-- Footer End -->

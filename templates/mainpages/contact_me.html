@@ -1,39 +1,107 @@
 {% extends 'base.html' %}
 
+<!-- load statics -->
+{% load static %}
+
 <!-- Content Block -->
 {% block PAGE_CONTENT %}
-<div class="pt-5 container-fluid">
-  <div class="container-fluid" style="margin-top: 3.5rem">
-    <h1 class="text-center">Contact</h1>
-    <lottie-player
-      class="ms-auto w-responsive"
-      src="https://assets10.lottiefiles.com/packages/lf20_9z81Gg.json"
-      background="transparent"
-      speed="0"
-      loop
-      autoplay
-    ></lottie-player>
-    <p>
-      Wanna Connect? Want me to make a website like this for you too? Connect
-      with me ASAP!
-    </p>
-    <h4>Socials</h4>
-    <div
-      class="d-flex flex-wrap align-items-start justify-content-center justify-content-lg-start"
-    >
-      <a class="btn btn-outline-primary button-ultra-red m-1" href="#!"
-        >Facebook</a
-      >
-      <a class="btn btn-outline-primary button-ultra-red m-1" href="#!"
-        >Twitter</a
-      >
-      <a class="btn btn-outline-primary button-ultra-red m-1" href="#!"
-        >Instagram</a
-      >
-      <a class="btn btn-outline-primary button-ultra-red m-1" href="#!"
-        >Discord</a
-      >
+<header>
+  <div class="page-header section-height-">
+    <div class="h-100-vh">
+      <img
+        class="
+          position-absolute
+          fixed-top
+          ms-auto
+          w-50
+          h-100
+          z-index-0
+          d-none d-sm-none d-md-block
+          border-radius-section
+          border-top-end-radius-0
+          border-top-start-radius-0
+          border-bottom-end-radius-0
+        "
+        src="{% static 'images/curved-images/curved8.jpg' %}"
+        alt="image"
+      />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 d-flex justify-content-center flex-column">
+          <div
+            class="
+              card
+              d-flex
+              blur
+              justify-content-center
+              p-4
+              shadow-lg
+              my-sm-0 my-sm-6
+              mt-8
+              mb-5
+            "
+          >
+            <div class="text-center">
+              <h3 class="text-gradient text-primary">Contact us</h3>
+              <p class="mb-0">
+                For further questions, including partnership opportunities,
+                please contact using our contact form.
+              </p>
+            </div>
+            <form id="contact-form" method="post" autocomplete="off">
+              <div class="card-body pb-2">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Full Name</label>
+                    <div class="input-group mb-4">
+                      <input
+                        class="form-control"
+                        placeholder="Full Name"
+                        aria-label="Full Name"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 ps-md-2">
+                    <label>Email</label>
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="mail@email.com"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mb-0 mt-md-0 mt-4">
+                  <label>How can we help you?</label>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="message"
+                    rows="6"
+                    placeholder="Describe your problem in at least 250 characters"
+                    style="resize: none;"
+                  ></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <button
+                      type="submit"
+                      class="btn bg-gradient-primary mt-3 mb-0"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</header>
+
 {% endblock PAGE_CONTENT %}
