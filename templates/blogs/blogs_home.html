@@ -7,40 +7,126 @@
 <section class="pt-5">
   <div class="container" style="margin-top: 3.5rem">
     <div class="row">
-      <div class="col-lg-6">
-        <h3 class="mb-5">Check my latest blogposts</h3>
+      <div class="col">
+        <h3 class="mb-2 mx-4">Check my latest Blog Posts</h3>
       </div>
     </div>
-    <div class="row">
-      {% for post in posts %}
 
-      <div class="col-lg-3 col-sm-6">
-        <div class="card card-plain card-blog my-2">
-          <div class="card-image border-radius-lg position-relative">
-            <a href="javascript:;">
-              <img
-                class="w-100 border-radius-lg move-on-hover shadow"
-                src="{{ post.featured_image.url }}"
-              />
-            </a>
-          </div>
-          <div class="card-body px-3">
-            <h5>
-              <a href="javascript:;" class="text-dark font-weight-bold"
-                >{{ post.title }}</a
-              >
-            </h5>
-            <p>{{ post.excerpt }}</p>
-            <a href="javascript:;" class="text-info icon-move-right"
-              >Read More
-              <i class="fas fa-arrow-right text-sm"></i>
-            </a>
-          </div>
+    {% for post in posts %}
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <section class="">
+            <div class="card card-plain card-blog mt-5">
+              <div class="row">
+                <div class="col-lg-4 col-md-4">
+                  <div class="card-image position-relative border-radiu">
+                    <div class="shadow-blur img-hover-zoom border-radius-lg">
+                      <a href="{% url 'blogs-post-detail' post.slug post.id %}">
+                        <img
+                          class="img-fluid border-radius-lg"
+                          src="{{ post.featured_image.url }}"
+                          alt="post Featured Image"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-md-7 my-sm-auto mt-3 ms-sm-3">
+                  <span class="text-gradient text-primary text-sm"
+                    >{{ post.date_posted|date:"j F, Y" }}</span
+                  >
+                  <h4>
+                    <a
+                      href="{% url 'blogs-post-detail' post.slug post.id %}"
+                      class="text-dark"
+                      >{{ post.title }}</a
+                    >
+                  </h4>
+                  <p>
+                    {{ post.excerpt }}
+                    <br />
+                    <a
+                      href="{% url 'blogs-post-detail' post.slug post.id %}"
+                      class="text-gradient text-primary icon-move-right"
+                      >Read More
+                      <i
+                        class="
+                          fas
+                          fa-arrow-right
+                          text-sm text-gradient text-primary
+                        "
+                      ></i>
+                    </a>
+                  </p>
+                  <div class="author">
+                    <img
+                      src="{% static 'images/wrench-avatar.png' %}"
+                      alt="team-4"
+                      class="avatar avatar-sm shadow me-2 rounded-circle"
+                    />
+                    <p class="my-auto">
+                      <span class="text-gradient text-primary"
+                        >{{ post.author }}</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </section>
+
+<div class="pt-3 d-flex justify-content-center">
+  {% if page_obj.has_previous %}
+  <div
+    class="btn btn-outline-primary btn-floating shadow-3"
+    style="margin-left: 2px; margin-right: 2px"
+    data-ripple-color="primary"
+  >
+    <a class="text-primary" href="?page=1"
+      ><i class="fas fa-angle-double-left"></i
+    ></a>
+  </div>
+  <div
+    class="btn btn-outline-primary btn-floating shadow-3"
+    style="margin-left: 2px; margin-right: 2px"
+    data-ripple-color="primary"
+  >
+    <a class="text-primary" href="?page={{ page_obj.previous_page_number }}"
+      ><i class="fas fa-angle-left"></i
+    ></a>
+  </div>
+  {% endif %}
+
+  <div class="p-2" aria-current="page">
+    <p class="">{{ page_obj.number }}</p>
+  </div>
+
+  {% if page_obj.has_next %}
+  <div
+    class="btn btn-outline-primary btn-floating shadow-3"
+    style="margin-left: 2px; margin-right: 2px"
+    data-ripple-color="primary"
+  >
+    <a class="text-primary" href="?page={{ page_obj.next_page_number }}"
+      ><i class="fas fa-angle-right"></i
+    ></a>
+  </div>
+  <div
+    class="btn btn-outline-primary btn-floating shadow-3"
+    style="margin-left: 2px; margin-right: 2px"
+    data-ripple-color="primary"
+  >
+    <a class="text-primary" href="?page={{ page_obj.paginator.num_pages }}"
+      ><i class="fas fa-angle-double-right"></i
+    ></a>
+  </div>
+  {% endif %}
+</div>
 
 {% endblock PAGE_CONTENT %}
