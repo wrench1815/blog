@@ -1,16 +1,19 @@
 {% load static %}
 <!-- ******************************************
-*  Author : Hardeep Kumar   
+*  Author : wrench1815   
 *  Created On : Fri Feb 05 2021
 *  File : base.html
 ******************************************* -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="author" content="Hardeep Kumar" />
-    <meta name="viewport" content="width=device-width" ,initial-scale="1" />
     <link
       rel="shortcut icon"
       href="{% static 'favicon.ico' %}"
@@ -22,11 +25,10 @@
     <title>wrench-log</title>
   </head>
 
-  <body class="bg-blush-beige">
-    <div class="container mt-4 fixed-top">
-      {% include 'includes/navbar.html' %}
-    </div>
-    <!-- <div class="container-fluid mt-5 pt-5"> -->
+  <body>
+    {% include 'includes/navbar.html' %}
+
+    <!-- Main Content -->
     {% block PAGE_CONTENT %} {% endblock PAGE_CONTENT %}
 
     <!-- Footer -->

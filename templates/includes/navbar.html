@@ -1,79 +1,170 @@
 {% load static %}
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-blush-beige custom-nav">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Navbar brand -->
-    <a class="navbar-brand text-english-voilet" href="{% url 'home' %}"
-      >Wrench-log</a
-    >
-
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a
-            class="nav-link text-english-voilet"
-            aria-current="page"
-            href="{% url 'home' %}"
-            >Home</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="{% url 'blogs' %}"
-            >Blog</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="{% url 'contactMe' %}"
-            >Contact</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-english-voilet" href="{% url 'about' %}"
-            >About</a
-          >
-        </li>
-      </ul>
-      <!-- Left links -->
-
-      <!-- Search form -->
-      <!--<form class="d-flex input-group w-auto">
-              <input
-                type="search"
-                class="form-control"
-                placeholder="Type query"
-                aria-label="Search"
-              />-->
-
-      <a
-        class="btn btn-outline-primary me-3 button-ultra-red"
-        data-mdb-ripple-color="dark"
-        href="{{ AdminSite.site_url }}/admin"
-        target="_blank"
+<div class="container position-sticky z-index-sticky top-0">
+  <div class="row">
+    <div class="col-12">
+      <nav
+        class="
+          navbar navbar-expand-lg
+          blur blur-rounded
+          top-0
+          z-index-fixed
+          shadow
+          position-absolute
+          my-3
+          py-2
+          start-0
+          end-0
+          mx-4
+        "
       >
-        Admin
-      </a>
-
-      <!--</form>-->
+        <div class="container-fluid">
+          <!-- Blog Name -->
+          <a
+            class="navbar-brand font-weight-bolder ms-sm-3 fs-5"
+            href="{% url 'home' %}"
+            rel="tooltip"
+            title="Wrench-log Home"
+            data-placement="bottom"
+          >
+            Wrench-log
+          </a>
+          <button
+            class="navbar-toggler shadow-none ms-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navigation"
+            aria-controls="navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          </button>
+          <div
+            class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100"
+            id="navigation"
+          >
+            <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+              <!-- Home Menu Item -->
+              <li class="nav-item mx-2">
+                <a
+                  class="
+                    nav-link
+                    ps-2
+                    fs-6
+                    d-flex
+                    justify-content-between
+                    cursor-pointer
+                    align-items-center
+                  "
+                  id="mainMenuBlog"
+                  aria-expanded="false"
+                  href="{% url 'home' %}"
+                >
+                  Home
+                </a>
+              </li>
+              <!-- Blog Menu Item -->
+              <li class="nav-item mx-2">
+                <a
+                  class="
+                    nav-link
+                    ps-2
+                    fs-6
+                    d-flex
+                    justify-content-between
+                    cursor-pointer
+                    align-items-center
+                  "
+                  id="mainMenuBlog"
+                  aria-expanded="false"
+                  href="{% url 'blogs' %}"
+                >
+                  Blog
+                </a>
+              </li>
+              <!-- Contact Menu Item -->
+              <li class="nav-item mx-2">
+                <a
+                  class="
+                    nav-link
+                    ps-2
+                    fs-6
+                    d-flex
+                    justify-content-between
+                    cursor-pointer
+                    align-items-center
+                  "
+                  id="mainMenuContact"
+                  aria-expanded="false"
+                  href="{% url 'contactMe' %}"
+                >
+                  Contact
+                </a>
+              </li>
+              <!-- About Menu Item -->
+              <li class="nav-item mx-2">
+                <a
+                  class="
+                    nav-link
+                    ps-2
+                    fs-6
+                    d-flex
+                    justify-content-between
+                    cursor-pointer
+                    align-items-center
+                  "
+                  id="mainMenuAbout"
+                  aria-expanded="false"
+                  href="{% url 'about' %}"
+                >
+                  About
+                </a>
+              </li>
+              <!-- Github link -->
+              <li class="nav-item ms-lg-auto">
+                <a
+                  class="nav-link nav-link-icon me-2 fs-6"
+                  href="https://github.com/wrench1815"
+                  target="_blank"
+                >
+                  <i class="fa fa-github me-1"></i>
+                  <p
+                    class="d-inline text-sm z-index-1 font-weight-bold"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    title="Join me on Github"
+                  >
+                    Github
+                  </p>
+                </a>
+              </li>
+              <!-- Admin Button -->
+              <li class="nav-item my-auto ms-3 ms-lg-0">
+                <a
+                  href="{{ AdminSite.site_url }}/admin"
+                  class="
+                    btn btn-sm
+                    bg-gradient-primary
+                    btn-round
+                    mb-0
+                    me-1
+                    mt-2 mt-md-0
+                  "
+                  target="_blank"
+                  >Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-    <!-- Collapsible wrapper -->
   </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
+</div>
+<!-- End Navbar -->
