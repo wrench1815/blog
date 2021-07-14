@@ -14,8 +14,8 @@ This repository is meant to handle all the files needed for site.
 
 - Django: Backend
 - Heroku: for hosting
-- MDB(Bootstrap 5 + Material design): CSS Franework
-- LottieFiles: Illustrations on site(also animated)
+- MDB(Bootstrap 5 + Material design): CSS Framework
+- Design System: Soft UI by Creative Tim
 
 ## Environment Variables needed
 
