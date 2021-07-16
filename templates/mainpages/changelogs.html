@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+<!-- load static -->
+{% load static %}
+
+<!-- Content Block -->
+{% block PAGE_CONTENT %}
+
+<div class="mt-8">
+  <h2 class="text-center">Site Changelogs</h2>
+  <div class="container my-5 bg-light">
+    <div class="row">
+      <div class="col">
+        <ul class="custom-timeline pt-1 pb-1 mb-2">
+          <div class="accordion" id="changelogAccordion">
+            {% for changelog in changelogs %}
+
+            <div class="custom-timeline-item-primary">
+              <div
+                class="
+                  accordion-item
+                  shadow-blur
+                  bg-white
+                  custom-timeline-arrow-left
+                  ms-2
+                  ps-0
+                "
+              >
+                <h2 class="accordion-header" id="headingLogOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#collapseLogOne"
+                    aria-expanded="true"
+                    aria-controls="collapseLogOne"
+                  >
+                    <span class="text-gradient text-primary text-bold me-1"
+                      >Version:</span
+                    >{{ changelog.version_title }}
+                  </button>
+                </h2>
+                <div
+                  id="collapseLogOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingLogOne"
+                  data-mdb-parent="#changelogAccordion"
+                >
+                  <div class="accordion-body">
+                    {{ changelog.version_description }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock PAGE_CONTENT %}
