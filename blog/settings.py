@@ -282,7 +282,24 @@ JAZZMIN_UI_TWEAKS={
 #yapf: disable
 CKEDITOR_CONFIGS = {
     'default': {
-        'width':'auto',
+        'width':'100%',
+        'height':'500px',
+        'skin':'bootstrapck',
+        'toolbar':'custom',
+        'toolbar_custom': [
+            [ 'Styles', 'Format', 'Font', 'FontSize' ],
+            [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ],
+            '/',
+            ['TextColor', 'BGColor'],
+            [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Language' ],
+            [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
+            [ 'Find', 'Replace', '-', 'SelectAll' ],
+            [ 'Link', 'Unlink', 'Anchor' ],
+            [ 'Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'Iframe' ],
+            [ 'Maximize', 'ShowBlocks' ],
+            [ 'Source'],
+            [ 'About' ]
+        ],
         'stylesSet': [
             {
                 'name': 'Paragraph',
@@ -319,7 +336,15 @@ CKEDITOR_CONFIGS = {
                 'element': 'h6',
                 'attributes': {'class': 'h6'},
             },
+            {
+                'name': 'Alert Warning',
+                'element': 'div',
+                'attributes': {'class': 'alert alert-warning text-white font-weight-bold d-inline-block'},
+            },
         ],
+        'removePlugins': ','.join(['exportpdf', ]),
+        "contentsCss": (STATIC_URL+'css/soft-design-system.min.css'),
+
     },
 }
 # yapf: enable
