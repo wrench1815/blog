@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -273,5 +274,52 @@ JAZZMIN_UI_TWEAKS={
         "success": "btn-outline-success"
     },
     "actions_sticky_top": True
+}
+# yapf: enable
+
+# CKEitor Configurations
+
+#yapf: disable
+CKEDITOR_CONFIGS = {
+    'default': {
+        'width':'auto',
+        'stylesSet': [
+            {
+                'name': 'Paragraph',
+                'element': 'p',
+                'attributes': {'class': 'p'},
+            },
+            {
+                'name': 'Heading 1',
+                'element': 'h1',
+                'attributes': {'class': 'h1'},
+            },
+            {
+                'name': 'Heading 2',
+                'element': 'h2',
+                'attributes': {'class': 'h2'},
+            },
+            {
+                'name': 'Heading 3',
+                'element': 'h3',
+                'attributes': {'class': 'h3'},
+            },
+            {
+                'name': 'Heading 4',
+                'element': 'h4',
+                'attributes': {'class': 'h4'},
+            },
+            {
+                'name': 'Heading 5',
+                'element': 'h5',
+                'attributes': {'class': 'h5'},
+            },
+            {
+                'name': 'Heading 6',
+                'element': 'h6',
+                'attributes': {'class': 'h6'},
+            },
+        ],
+    },
 }
 # yapf: enable
