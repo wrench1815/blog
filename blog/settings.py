@@ -130,6 +130,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# settings for auto-generated primary keys as per Django 3.2
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 # yapf: disable
 # Jazzmin settings
 JAZZMIN_SETTINGS = {
@@ -207,8 +210,10 @@ JAZZMIN_SETTINGS = {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
-        "Blogs": "far fa-file",
+        "Blogs": "far fa-file-alt",
         "Blogs.Post": "fas fa-pen-nib",
+        "mainpages":"far fa-file",
+        "mainpages.ChangelogsModel":"fas fa-sync-alt rotate-circular"
     },
 
     #############

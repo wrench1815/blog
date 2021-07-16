@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import ChangelogsModel
 
 
 def home(request):
@@ -11,3 +12,10 @@ def about(request):
 
 def contactMe(request):
     return render(request, 'mainpages/contact_me.html')
+
+
+def changelogs(request):
+    changelogs = ChangelogsModel.objects.all()
+    context = {'changelogs': changelogs}
+
+    return render(request, 'mainpages/changelogs.html', context)
