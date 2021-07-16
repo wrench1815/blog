@@ -214,3 +214,199 @@
 .img-hover-zoom:hover img {
   transform: scale(1.2);
 }
+
+/* Timeline (vertical ruler) */
+.custom-timeline {
+  list-style-type: none;
+  position: relative;
+}
+
+/* Timeline (vertical ruler) Properties */
+.custom-timeline::before {
+  content: ' ';
+  background: linear-gradient(310deg, #7928ca, #ff0080);
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+
+/* Primary Timeline Item */
+.custom-timeline-item-primary {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* Primary Timeline Item icon */
+.custom-timeline-item-primary::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #cb0c9f;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  z-index: 400;
+}
+
+/* Secondary Timeline Item */
+.custom-timeline-item-secondary {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* Secondary Timeline Item icon */
+.custom-timeline-item-secondary::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #8392ab;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  z-index: 400;
+}
+
+/* Info Timeline Item */
+.custom-timeline-item-info {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* Info Timeline Item icon */
+.custom-timeline-item-info::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #17c1e8;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  z-index: 400;
+}
+
+/* Success Timeline Item */
+.custom-timeline-item-success {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* Success Timeline Item icon */
+.custom-timeline-item-success::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #82d616;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  z-index: 400;
+}
+
+/* Danger Timeline Item */
+.custom-timeline-item-danger {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* Danger Timeline Item icon */
+.custom-timeline-item-danger::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #ea0606;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  z-index: 400;
+}
+
+/* Warning Timeline Item */
+.custom-timeline-item-warning {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* Warning Timeline Item icon */
+.custom-timeline-item-warning::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #f53939;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  z-index: 400;
+}
+
+/* Dark Timeline Item */
+.custom-timeline-item-dark {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* Dark Timeline Item icon */
+.custom-timeline-item-dark::before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #252f40;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 16px;
+  z-index: 400;
+}
+
+/* Timeline Callout like arrow facing left side */
+.custom-timeline-arrow-left {
+  padding: 0px 0px 0px 0px;
+}
+
+/* Timeline Callout like arrow facing left side properties */
+.custom-timeline-arrow-left::before {
+  content: ' ';
+  position: absolute;
+  margin-top: 15px;
+  z-index: 1;
+  left: 50px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* circularly rotate */
+.rotate-circular {
+  animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
