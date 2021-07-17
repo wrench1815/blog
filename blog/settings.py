@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = bool(os.getenv('DEBUG_TOGGLE'))
 
 ALLOWED_HOSTS = ['wrenchlog.herokuapp.com', '127.0.0.1', 'localhost']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +130,13 @@ STATIC_ROOT = BASE_DIR / 'statics'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+# Settings for whitenoise compression
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Settings for using Dropbox as a backend for Media
+DEFAULT_FILE_STORAGE = os.getenv('DEFAULT_FILE_STORAGE')
+DROPBOX_OAUTH2_TOKEN = os.getenv('DROPBOX_OAUTH2_TOKEN')
+DROPBOX_ROOT_PATH = '/media'
 
 # settings for auto-generated primary keys as per Django 3.2
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
@@ -339,11 +346,11 @@ CKEDITOR_CONFIGS = {
             {
                 'name': 'Alert Warning',
                 'element': 'div',
-                'attributes': {'class': 'alert alert-warning text-white font-weight-bold d-inline-block'},
+                'attributes': {'class': 'alert alert-warning text-white font-weight-bold d-inline-block p-2'},
             },
         ],
         'removePlugins': ','.join(['exportpdf', ]),
-        "contentsCss": (STATIC_URL+'css/soft-design-system.min.css'),
+        "contentsCss": (STATIC_URL+'css/soft-design-system.min.css', STATIC_URL+'css/stylesheet.css'),
 
     },
 }

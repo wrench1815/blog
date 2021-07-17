@@ -20,12 +20,3 @@ if (document.getElementById('Multi-Lang-Hello')) {
     loop: true,
   });
 }
-
-window.addEventListener('load', function () {
-  setTimeout(function () {
-    if (document.getElementById('cke_1_contents')) {
-      var ele = document.getElementById('cke_1_contents');
-      ele.classList.add('p-3');
-    }
-  }, 2000);
-});
