@@ -14,7 +14,7 @@ class Post(models.Model):
     excerpt = models.TextField(blank=False, null=True, max_length=200)
     slug = models.SlugField(null=False, editable=False, max_length=100)
     featured_image = models.ImageField(default='default_featured_image.jpg',
-                                       upload_to='featured_images')
+                                       upload_to='featured_images/')
 
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
