@@ -411,7 +411,24 @@
   }
 }
 
-/* ckdetor padding fix */
+/* ! ckdetor padding fix */
 .cke_editable {
   margin: 1rem !important;
+}
+
+/* ! Image aspect ratios */
+/* * 16:9 aspect Ratio Images */
+.img-16-9 {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* * 4:3  aspect ratio Images */
+.img-4-3 {
+  aspect-ratio: 4/3;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
