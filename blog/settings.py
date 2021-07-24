@@ -344,9 +344,34 @@ CKEDITOR_CONFIGS = {
                 'attributes': {'class': 'h6'},
             },
             {
+                'name': 'Alert Primary',
+                'element': 'div',
+                'attributes': {'class': 'alert alert-primary text-white font-weight-bold d-inline-block p-2'},
+            },
+            {
+                'name': 'Alert Secondary',
+                'element': 'div',
+                'attributes': {'class': 'alert alert-secondary text-white font-weight-bold d-inline-block p-2'},
+            },
+            {
+                'name': 'Alert Info',
+                'element': 'div',
+                'attributes': {'class': 'alert alert-info text-white font-weight-bold d-inline-block p-2'},
+            },
+            {
+                'name': 'Alert Success',
+                'element': 'div',
+                'attributes': {'class': 'alert alert-success text-white font-weight-bold d-inline-block p-2'},
+            },
+            {
                 'name': 'Alert Warning',
                 'element': 'div',
                 'attributes': {'class': 'alert alert-warning text-white font-weight-bold d-inline-block p-2'},
+            },
+            {
+                'name': 'Alert Danger',
+                'element': 'div',
+                'attributes': {'class': 'alert alert-danger text-white font-weight-bold d-inline-block p-2'},
             },
         ],
         'removePlugins': ','.join(['exportpdf', ]),

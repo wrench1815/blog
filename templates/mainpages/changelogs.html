@@ -7,40 +7,49 @@
 
 <div class="mt-8">
   <h2 class="text-center">Site Changelogs</h2>
-  <div class="container my-5 bg-light">
+  <div class="container my-5 bg-light rounded-3">
     <div class="row">
       <div class="col">
         <ul class="custom-timeline pt-1 pb-1 mb-2">
           <div class="accordion" id="changelogAccordion">
             {% for changelog in changelogs %}
 
-            <div class="custom-timeline-item-primary">
+            <div class="
+            {% if changelog.version_type == 'Beta' %}
+              custom-timeline-item-warning
+            {% elif changelog.version_type == 'Major' %}
+              custom-timeline-item-success
+            {% else %}
+              custom-timeline-item-info
+            {% endif %}
+              ">
               <div
-                class="
-                  accordion-item
-                  shadow-blur
-                  bg-white
-                  custom-timeline-arrow-left
-                  ms-2
-                  ps-0
-                "
+                class=" accordion-item shadow-blur bg-white custom-timeline-arrow-left ms-2 ps-0"
               >
                 <h2 class="accordion-header" id="headingLogOne">
                   <button
                     class="accordion-button"
                     type="button"
                     data-mdb-toggle="collapse"
-                    data-mdb-target="#collapseLogOne"
+                    data-mdb-target="#collapseLogOne{{ changelog.pk }}"
                     aria-expanded="true"
-                    aria-controls="collapseLogOne"
+                    aria-controls="collapseLogOne{{ changelog.pk }}"
                   >
                     <span class="text-gradient text-primary text-bold me-1"
                       >Version:</span
-                    >{{ changelog.version_title }}
+                    >{{ changelog.version_title }} <span class="ms-2 badge
+                    {% if changelog.version_type == 'Beta' %}
+                      bg-gradient-warning
+                    {% elif changelog.version_type == 'Major' %}
+                      bg-gradient-success
+                    {% else %}
+                      bg-gradient-info
+                    {% endif %}
+                    ">{{ changelog.version_type }}</span>
                   </button>
                 </h2>
                 <div
-                  id="collapseLogOne"
+                  id="collapseLogOne{{ changelog.pk }}"
                   class="accordion-collapse collapse"
                   aria-labelledby="headingLogOne"
                   data-mdb-parent="#changelogAccordion"
