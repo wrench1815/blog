@@ -104,7 +104,7 @@ sftp = ["paramiko"]
 
 [[package]]
 name = "dropbox"
-version = "11.13.3"
+version = "11.14.0"
 description = "Official Dropbox API Client"
 category = "main"
 optional = false
@@ -301,9 +301,9 @@ django-storages = [
     {file = "django_storages-1.11.1-py3-none-any.whl", hash = "sha256:f28765826d507a0309cfaa849bd084894bc71d81bf0d09479168d44785396f80"},
 ]
 dropbox = [
-    {file = "dropbox-11.13.3-py2-none-any.whl", hash = "sha256:c3e3c5af1669db1c565b22f6eed2c3bdeb3ef57134e5e614d9334ea2fa37624a"},
-    {file = "dropbox-11.13.3-py3-none-any.whl", hash = "sha256:3b85320eb0d1cd2da1c8a34870a6c24dc2f74890de21865a1bb15e8c501e0573"},
-    {file = "dropbox-11.13.3.tar.gz", hash = "sha256:a31b1e01855f9d42e2b92d28ec99c2c1d46b8f973702e5b9d0b6855bb27408ad"},
+    {file = "dropbox-11.14.0-py2-none-any.whl", hash = "sha256:ea5cb9aae19fe01fa0f8553ed096e81e5bcd7279337208d84cee166d09eb2a04"},
+    {file = "dropbox-11.14.0-py3-none-any.whl", hash = "sha256:e7de5f0a99e3a0e1952624fb55379b32bd9693b7560f41dd7e3e1ceea1331f8f"},
+    {file = "dropbox-11.14.0.tar.gz", hash = "sha256:333f7221ae62df5e4a7fb3f62400e6ff3395e18806762c081ba3e11e3210e4dd"},
 ]
 gunicorn = [
     {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
