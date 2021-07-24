@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "blog"
-version = "0.1.0-beta.1"
+version = "0.1.0-beta.2"
 description = "My Personal Blog"
 authors = ["wrench1815 <hardeepkumar1815@gmail.com>"]
 
