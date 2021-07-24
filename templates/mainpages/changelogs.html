@@ -30,9 +30,9 @@
                     class="accordion-button"
                     type="button"
                     data-mdb-toggle="collapse"
-                    data-mdb-target="#collapseLogOne"
+                    data-mdb-target="#collapseLogOne{{ changelog.pk }}"
                     aria-expanded="true"
-                    aria-controls="collapseLogOne"
+                    aria-controls="collapseLogOne{{ changelog.pk }}"
                   >
                     <span class="text-gradient text-primary text-bold me-1"
                       >Version:</span
@@ -40,7 +40,7 @@
                   </button>
                 </h2>
                 <div
-                  id="collapseLogOne"
+                  id="collapseLogOne{{ changelog.pk }}"
                   class="accordion-collapse collapse"
                   aria-labelledby="headingLogOne"
                   data-mdb-parent="#changelogAccordion"
