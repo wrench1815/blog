@@ -15,7 +15,7 @@ def contactMe(request):
 
 
 def changelogs(request):
-    changelogs = ChangelogsModel.objects.all()
+    changelogs = ChangelogsModel.objects.all().order_by('-pk')
     context = {'changelogs': changelogs}
 
     return render(request, 'mainpages/changelogs.html', context)
