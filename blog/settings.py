@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor_uploader',
     'ckeditor',
     'storages',
 ]
@@ -285,6 +286,10 @@ JAZZMIN_UI_TWEAKS={
 # yapf: enable
 
 # CKEitor Configurations
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_RESTRICT_BY_DATE = False
+# CKEDITOR_BROWSE_SHOW_DIRS = True
 
 #yapf: disable
 CKEDITOR_CONFIGS = {

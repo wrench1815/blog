@@ -4,13 +4,14 @@ from django.utils import timezone
 from django.urls import reverse
 from django.utils.text import slugify
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
     post_tagline = models.CharField(
         max_length=100, default='This is a default Tagline, Change it')
-    content = RichTextField()
+    content = RichTextUploadingField()
     excerpt = models.TextField(blank=False, null=True, max_length=200)
     slug = models.SlugField(null=False, editable=False, max_length=100)
     featured_image = models.ImageField(default='default_featured_image.jpg',
