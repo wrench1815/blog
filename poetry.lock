@@ -19,7 +19,7 @@ python-versions = "*"
 
 [[package]]
 name = "charset-normalizer"
-version = "2.0.3"
+version = "2.0.4"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
 category = "main"
 optional = false
@@ -66,14 +66,14 @@ django-js-asset = ">=1.2.2"
 
 [[package]]
 name = "django-jazzmin"
-version = "2.4.7"
+version = "2.4.8"
 description = "Drop-in theme for django admin, that utilises AdminLTE 3 & Bootstrap 4 to make yo' admin look jazzy"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-django = ">=2"
+django = ">=2.2"
 
 [[package]]
 name = "django-js-asset"
@@ -104,7 +104,7 @@ sftp = ["paramiko"]
 
 [[package]]
 name = "dropbox"
-version = "11.14.0"
+version = "11.15.0"
 description = "Official Dropbox API Client"
 category = "main"
 optional = false
@@ -273,8 +273,8 @@ certifi = [
     {file = "certifi-2021.5.30.tar.gz", hash = "sha256:2bbf76fd432960138b3ef6dda3dde0544f27cbf8546c458e60baf371917ba9ee"},
 ]
 charset-normalizer = [
-    {file = "charset-normalizer-2.0.3.tar.gz", hash = "sha256:c46c3ace2d744cfbdebceaa3c19ae691f53ae621b39fd7570f59d14fb7f2fd12"},
-    {file = "charset_normalizer-2.0.3-py3-none-any.whl", hash = "sha256:88fce3fa5b1a84fdcb3f603d889f723d1dd89b26059d0123ca435570e848d5e1"},
+    {file = "charset-normalizer-2.0.4.tar.gz", hash = "sha256:f23667ebe1084be45f6ae0538e4a5a865206544097e4e8bbcacf42cd02a348f3"},
+    {file = "charset_normalizer-2.0.4-py3-none-any.whl", hash = "sha256:0c8911edd15d19223366a194a513099a302055a962bca2cec0f54b8b63175d8b"},
 ]
 dj-database-url = [
     {file = "dj-database-url-0.5.0.tar.gz", hash = "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163"},
@@ -289,8 +289,8 @@ django-ckeditor = [
     {file = "django_ckeditor-6.1.0-py2.py3-none-any.whl", hash = "sha256:346b26b9d60dc8a88524d0eaaf406f4e91a4b3c22d208ae87aa032bf500b251c"},
 ]
 django-jazzmin = [
-    {file = "django-jazzmin-2.4.7.tar.gz", hash = "sha256:585d0c998875d6ada49ffa7b1bc6c21dcb90a53ba4d0f42f6b0d8fcfc212fa4c"},
-    {file = "django_jazzmin-2.4.7-py3-none-any.whl", hash = "sha256:90f3ceee87517aa4183d22eef8ec34067588a37ef02484ac47502865be211148"},
+    {file = "django-jazzmin-2.4.8.tar.gz", hash = "sha256:355b8ff5939555a7dbecaa364a54bbdbcc20f028605abedd6d9e2b6a4d1532b4"},
+    {file = "django_jazzmin-2.4.8-py3-none-any.whl", hash = "sha256:577b6ef97a51167dac94b12f340a1233b0e5e124c37bce25a7821ba61c22e6b8"},
 ]
 django-js-asset = [
     {file = "django-js-asset-1.2.2.tar.gz", hash = "sha256:c163ae80d2e0b22d8fb598047cd0dcef31f81830e127cfecae278ad574167260"},
@@ -301,9 +301,9 @@ django-storages = [
     {file = "django_storages-1.11.1-py3-none-any.whl", hash = "sha256:f28765826d507a0309cfaa849bd084894bc71d81bf0d09479168d44785396f80"},
 ]
 dropbox = [
-    {file = "dropbox-11.14.0-py2-none-any.whl", hash = "sha256:ea5cb9aae19fe01fa0f8553ed096e81e5bcd7279337208d84cee166d09eb2a04"},
-    {file = "dropbox-11.14.0-py3-none-any.whl", hash = "sha256:e7de5f0a99e3a0e1952624fb55379b32bd9693b7560f41dd7e3e1ceea1331f8f"},
-    {file = "dropbox-11.14.0.tar.gz", hash = "sha256:333f7221ae62df5e4a7fb3f62400e6ff3395e18806762c081ba3e11e3210e4dd"},
+    {file = "dropbox-11.15.0-py2-none-any.whl", hash = "sha256:664ed2f5d8ed70518c2034edfaf0453edfa89691813da1a436d0661e23afdd2c"},
+    {file = "dropbox-11.15.0-py3-none-any.whl", hash = "sha256:c3135a53f4b121dc6570a24916754a5afbb7985859382c7364890d3d3f013524"},
+    {file = "dropbox-11.15.0.tar.gz", hash = "sha256:3c29a6600bb592224f8cafbdbe22b6699f713ebf589d28713711cba661ac9858"},
 ]
 gunicorn = [
     {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
