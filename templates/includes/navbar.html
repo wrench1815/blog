@@ -4,8 +4,7 @@
 <div class="container position-sticky z-index-sticky top-0">
   <div class="row">
     <div class="col-12">
-      <nav
-        class="
+      <nav class="
           navbar navbar-expand-lg
           blur blur-rounded
           top-0
@@ -17,43 +16,27 @@
           start-0
           end-0
           mx-4
-        "
-      >
+        ">
         <div class="container-fluid">
           <!-- Blog Name -->
-          <a
-            class="navbar-brand font-weight-bolder ms-sm-3 fs-5"
-            href="{% url 'home' %}"
-            rel="tooltip"
-            title="Wrench-log Home"
-            data-placement="bottom"
-          >
+          <a class="navbar-brand font-weight-bolder ms-sm-3 fs-5" href="{% url 'home' %}" rel="tooltip"
+            title="Wrench-log Home" data-placement="bottom">
             Wrench-log
           </a>
-          <button
-            class="navbar-toggler shadow-none ms-2"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navigation"
-            aria-controls="navigation"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler shadow-none ms-2" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navigation" aria-controls="navigation" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon mt-2">
               <span class="navbar-toggler-bar bar1"></span>
               <span class="navbar-toggler-bar bar2"></span>
               <span class="navbar-toggler-bar bar3"></span>
             </span>
           </button>
-          <div
-            class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100"
-            id="navigation"
-          >
+          <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
             <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
               <!-- Home Menu Item -->
               <li class="nav-item mx-2">
-                <a
-                  class="
+                <a class="
                     nav-link
                     ps-2
                     fs-6
@@ -61,18 +44,13 @@
                     justify-content-between
                     cursor-pointer
                     align-items-center
-                  "
-                  id="mainMenuBlog"
-                  aria-expanded="false"
-                  href="{% url 'home' %}"
-                >
+                  " id="mainMenuHome" aria-expanded="false" href="{% url 'home' %}">
                   Home
                 </a>
               </li>
               <!-- Blog Menu Item -->
               <li class="nav-item mx-2">
-                <a
-                  class="
+                <a class="
                     nav-link
                     ps-2
                     fs-6
@@ -80,18 +58,13 @@
                     justify-content-between
                     cursor-pointer
                     align-items-center
-                  "
-                  id="mainMenuBlog"
-                  aria-expanded="false"
-                  href="{% url 'blogs' %}"
-                >
+                  " id="mainMenuBlog" aria-expanded="false" href="{% url 'blogs' %}">
                   Blog
                 </a>
               </li>
               <!-- Contact Menu Item -->
               <li class="nav-item mx-2">
-                <a
-                  class="
+                <a class="
                     nav-link
                     ps-2
                     fs-6
@@ -99,18 +72,13 @@
                     justify-content-between
                     cursor-pointer
                     align-items-center
-                  "
-                  id="mainMenuContact"
-                  aria-expanded="false"
-                  href="{% url 'contactMe' %}"
-                >
+                  " id="mainMenuContact" aria-expanded="false" href="{% url 'contactMe' %}">
                   Contact
                 </a>
               </li>
               <!-- About Menu Item -->
               <li class="nav-item mx-2">
-                <a
-                  class="
+                <a class="
                     nav-link
                     ps-2
                     fs-6
@@ -118,68 +86,42 @@
                     justify-content-between
                     cursor-pointer
                     align-items-center
-                  "
-                  id="mainMenuAbout"
-                  aria-expanded="false"
-                  href="{% url 'about' %}"
-                >
+                  " id="mainMenuAbout" aria-expanded="false" href="{% url 'about' %}">
                   About
                 </a>
               </li>
-              <!-- About Menu Item -->
+              <!-- Changelogs Menu Item -->
               <li class="nav-item mx-2">
-                <a
-                  class="nav-link nav-link-icon ps-2 fs-6 cursor-pointer"
-                  id="mainMenuChangelogs"
-                  aria-expanded="false"
-                  href="{% url 'site-changelogs' %}"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="bottom"
-                  title="Site Changelogs"
-                >
-                  <i
-                    class="
+                <a class="nav-link nav-link-icon ps-2 fs-6 cursor-pointer" id="mainMenuChangelogs" aria-expanded="false"
+                  href="{% url 'site-changelogs' %}">
+                  <i class="
                       fas
                       fa-sync-alt
                       rotate-circular
                       text-gradient text-primary
-                    "
-                  ></i>
+                    " data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Site Changelogs"></i>
                 </a>
               </li>
               <!-- Github link -->
               <li class="nav-item ms-lg-auto">
-                <a
-                  class="nav-link nav-link-icon me-2 fs-6"
-                  href="https://github.com/wrench1815"
-                  target="_blank"
-                >
+                <a class="nav-link nav-link-icon me-2 fs-6" href="https://github.com/wrench1815" target="_blank">
                   <i class="fa fa-github me-1"></i>
-                  <p
-                    class="d-inline text-sm z-index-1 font-weight-bold"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom"
-                    title="Join me on Github"
-                  >
+                  <p class="d-inline text-sm z-index-1 font-weight-bold" data-mdb-toggle="tooltip"
+                    data-mdb-placement="bottom" title="Join me on Github">
                     Github
                   </p>
                 </a>
               </li>
               <!-- Admin Button -->
               <li class="nav-item my-auto ms-3 ms-lg-0">
-                <a
-                  href="{{ AdminSite.site_url }}/admin"
-                  class="
+                <a href="{{ AdminSite.site_url }}/admin" class="
                     btn btn-sm
                     bg-gradient-primary
                     btn-round
                     mb-0
                     me-1
                     mt-2 mt-md-0
-                  "
-                  target="_blank"
-                  >Admin</a
-                >
+                  " target="_blank">Admin</a>
               </li>
             </ul>
           </div>
