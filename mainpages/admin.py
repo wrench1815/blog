@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import ChangelogsModel
+from .models import ChangelogsModel, ContactForm
 from django.utils.html import format_html
 
 
-# Registering changelogsModel into admin
+# Registering ChangelogsModel into admin
 @admin.register(ChangelogsModel)
 class ChangelogsModelAdmin(admin.ModelAdmin):
     '''Admin View for ChangelogsModel'''
@@ -25,3 +25,11 @@ class ChangelogsModelAdmin(admin.ModelAdmin):
             return format_html(
                 '<div class="text-white font-weight-bold d-inline-block py-1 px-3" style="background-image: linear-gradient(310deg,#2152ff,#02c6f3); border-radius: .5rem;">{}</div>',
                 obj.version_type)
+
+
+# Registering Contact Form into Admin
+@admin.register(ContactForm)
+class ContactFormAdmin(admin.ModelAdmin):
+    '''Admin View for ContactForm'''
+
+    list_display = ('full_name', 'email', 'was_readed')

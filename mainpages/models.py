@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 
 # Changelog Model
 class ChangelogsModel(models.Model):
-    """Model definition for ChangelogsModel."""
+    '''Model definition for ChangelogsModel.'''
     VERSION_TYPE = (
         ('Beta', 'Beta'),
         ('Major', 'Major'),
@@ -18,11 +18,28 @@ class ChangelogsModel(models.Model):
                                     default='Beta')
 
     class Meta:
-        """Meta definition for changelogsModel."""
+        '''Meta definition for ChangelogsModel'''
 
         verbose_name = 'Changelog'
         verbose_name_plural = 'Changelogs'
 
     def __str__(self):
-        """Unicode representation of changelogsModel."""
+        '''Unicode representation of ChangelogsModel.'''
         return self.version_title
+
+
+class ContactForm(models.Model):
+    '''Model Definitions for Contact Form'''
+    full_name = models.CharField(max_length=25, blank=False)
+    email = models.EmailField(blank=False)
+    message = models.TextField(blank=False, )
+    was_readed = models.BooleanField(default=False)
+
+    class Meta:
+        '''Meta definition for ContactForm'''
+        verbose_name = 'Contact Form'
+        verbose_name_plural = 'Contact Forms'
+
+    def __str__(self):
+        '''Unicode representation of ContactForm'''
+        return self.full_name

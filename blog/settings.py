@@ -222,7 +222,8 @@ JAZZMIN_SETTINGS = {
         "Blogs": "far fa-file-alt",
         "Blogs.Post": "fas fa-pen-nib",
         "mainpages":"far fa-file",
-        "mainpages.ChangelogsModel":"fas fa-sync-alt rotate-circular"
+        "mainpages.ChangelogsModel":"fas fa-sync-alt rotate-circular",
+        "mainpages.ContactForm":"fas fa-envelope-open-text"
     },
 
     #############
