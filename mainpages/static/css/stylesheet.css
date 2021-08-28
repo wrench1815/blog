@@ -432,3 +432,57 @@
   object-fit: cover;
   object-position: center;
 }
+
+/* ! Form Colors */
+.form-outline .form-control:focus ~ .form-notch .form-notch-leading {
+  border-top: 0.125rem solid #cb0c9f;
+  border-bottom: 0.125rem solid #cb0c9f;
+  border-left: 0.125rem solid #cb0c9f;
+}
+.form-outline .form-control:focus ~ .form-notch .form-notch-middle {
+  border-bottom: 0.125rem solid;
+  border-color: #cb0c9f;
+}
+
+.form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
+  border-color: currentcolor currentcolor currentcolor #cb0c9f;
+  border-bottom: 0.125rem solid #cb0c9f;
+  border-right: 0.125rem solid #cb0c9f;
+  border-top: 0.125rem solid #cb0c9f;
+}
+
+.form-outline .form-control:focus ~ .form-label {
+  color: #cb0c9f;
+}
+
+/* ! Responsive width of bg image in header */
+/* * 50% width */
+.w-50-100 {
+  width: 50%;
+}
+
+/* * 100% width on sm */
+@media only screen and (max-width: 600px) {
+  .w-50-100 {
+    width: 100% !important;
+  }
+}
+
+/* * form validation field's Top Margin reset */
+.valid-feedback,
+.invalid-feedback {
+  margin-top: -0.75rem;
+}
+
+/* * zindex utilities */
+z-index-1 {
+  z-index: 1;
+}
+
+z-index-2 {
+  z-index: 2;
+}
+
+z-index-0 {
+  z-index: 0;
+}

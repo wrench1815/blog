@@ -1,0 +1,27 @@
+{% if messages %} {% for message in messages %}
+<div class="fixed-top mt-7 col-lg-4 col-md-5 ms-auto" style="z-index: 1">
+  <div
+    class="
+      alert alert-dismissible
+      fade
+      show
+      blur
+      border-0 border-radius-top-end-0 border-radius-bottom-end-0
+    "
+    data-mdb-color="white"
+    role="alert"
+  >
+    <span class="alert-text me-0 text-dark">{{ message|safe }}</span>
+    <button
+      type="button"
+      class="btn-close"
+      data-mdb-dismiss="alert"
+      aria-label="Close"
+    >
+      <span class="text-gradient text-primary mt-0 pt-0" aria-hidden="true"
+        ><i class="fas fa-times fa-fw"></i
+      ></span>
+    </button>
+  </div>
+</div>
+{% endfor %} {% endif %}
