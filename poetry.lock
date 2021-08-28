@@ -38,7 +38,7 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "3.2.5"
+version = "3.2.6"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -104,7 +104,7 @@ sftp = ["paramiko"]
 
 [[package]]
 name = "dropbox"
-version = "11.15.0"
+version = "11.18.0"
 description = "Official Dropbox API Client"
 category = "main"
 optional = false
@@ -281,8 +281,8 @@ dj-database-url = [
     {file = "dj_database_url-0.5.0-py2.py3-none-any.whl", hash = "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"},
 ]
 django = [
-    {file = "Django-3.2.5-py3-none-any.whl", hash = "sha256:c58b5f19c5ae0afe6d75cbdd7df561e6eb929339985dbbda2565e1cabb19a62e"},
-    {file = "Django-3.2.5.tar.gz", hash = "sha256:3da05fea54fdec2315b54a563d5b59f3b4e2b1e69c3a5841dda35019c01855cd"},
+    {file = "Django-3.2.6-py3-none-any.whl", hash = "sha256:7f92413529aa0e291f3be78ab19be31aefb1e1c9a52cd59e130f505f27a51f13"},
+    {file = "Django-3.2.6.tar.gz", hash = "sha256:f27f8544c9d4c383bbe007c57e3235918e258364577373d4920e9162837be022"},
 ]
 django-ckeditor = [
     {file = "django-ckeditor-6.1.0.tar.gz", hash = "sha256:f0d108f67a81a04e26d8de11255fe314f51026eaf8eb0534a807512ae3c21620"},
@@ -301,9 +301,9 @@ django-storages = [
     {file = "django_storages-1.11.1-py3-none-any.whl", hash = "sha256:f28765826d507a0309cfaa849bd084894bc71d81bf0d09479168d44785396f80"},
 ]
 dropbox = [
-    {file = "dropbox-11.15.0-py2-none-any.whl", hash = "sha256:664ed2f5d8ed70518c2034edfaf0453edfa89691813da1a436d0661e23afdd2c"},
-    {file = "dropbox-11.15.0-py3-none-any.whl", hash = "sha256:c3135a53f4b121dc6570a24916754a5afbb7985859382c7364890d3d3f013524"},
-    {file = "dropbox-11.15.0.tar.gz", hash = "sha256:3c29a6600bb592224f8cafbdbe22b6699f713ebf589d28713711cba661ac9858"},
+    {file = "dropbox-11.18.0-py2-none-any.whl", hash = "sha256:7fccba977e9c011096d2f1b27f16b5319628fd141d18113bc03627b6174961d8"},
+    {file = "dropbox-11.18.0-py3-none-any.whl", hash = "sha256:dc0d50b6f8c2b3a1df1f72ff3c28f3fd1a98f44853adbc696f4b2d2112dc5f45"},
+    {file = "dropbox-11.18.0.tar.gz", hash = "sha256:fa512c87521809e93502fc6a27b1d57ffbcef2281468c8f93575eab6a9ad5f05"},
 ]
 gunicorn = [
     {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
