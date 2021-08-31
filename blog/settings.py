@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'mainpages.apps.MainpagesConfig',
     'jazzmin',
     'blogs.apps.BlogsConfig',
+    'user.apps.UserConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -145,53 +146,57 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # yapf: disable
 # Jazzmin settings
 JAZZMIN_SETTINGS = {
-    # 'show_ui_builder': True,
-
     # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": "Wrench-log Admin",
-    "navbar_small_text": False,
+    'site_title': 'Wrench-log Admin',
+    'navbar_small_text': False,
 
     # Title on the brand, and login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "Wrench-log Admin",
+    'site_header': 'Wrench-log Admin',
 
     # square logo to use for your site, must be present in static files, used for favicon and brand on top left
-    "site_logo": "favicon.ico",
+    'site_logo': 'favicon.ico',
 
     # Welcome text on the login screen
-    "welcome_sign": "Need some Powers?",
+    'welcome_sign': 'Need some Powers?',
 
     # Copyright on the footer
-    "copyright": "wrench1815",
+    'copyright': 'wrench1815',
 
     ############
     # Top Menu #
     ############
 
     # Links to put along the top menu
-    "topmenu_links": [
+    'topmenu_links': [
 
         # Url that gets reversed (Permissions can be added)
         {
-            "name": "Home",
-            "url": "admin:index",
-            "permissions": ["auth.view_user"]
+            'name': 'Home',
+            'url': 'admin:index',
+            'permissions': ['auth.view_user']
         },
 
         # model admin to link to (Permissions checked against model)
         {
-            "model": "auth.User"
+            'model': 'auth.User'
+        },
+
+        # App 'mainpages' with dropdown menu to all its models pages
+        {
+            'app':'mainpages'
+
         },
 
         # Link to Site
         {
-            "name": "To main Site",
-            "url": "home",
-            "new_window": True
+            'name': 'To main Site',
+            'url': 'home',
+            'new_window': True
         },
 
         # App with dropdown menu to all its models pages (Permissions checked against models)
         # {
-        #     "app": "books"
+        #     'app': 'books'
         # },
     ],
 
@@ -200,30 +205,30 @@ JAZZMIN_SETTINGS = {
     #############
 
     # Whether to display the side menu
-    "show_sidebar": True,
+    'show_sidebar': True,
 
     # Whether to auto expand the menu
-    "navigation_expanded": True,
+    'navigation_expanded': True,
 
     # Hide these apps when generating side menu e.g (auth)
-    "hide_apps": [],
+    'hide_apps': [],
 
     # Hide these models when generating side menu (e.g auth.user)
-    "hide_models": [],
+    'hide_models': [],
 
     # Just make sure auth is first
-    "order_with_respect_to": ["auth"],
+    'order_with_respect_to': ['auth'],
 
     # Custom icons for side menu apps/models
-    "icons": {
-        "auth": "fas fa-users-cog",
-        "auth.user": "fas fa-user",
-        "auth.Group": "fas fa-users",
-        "Blogs": "far fa-file-alt",
-        "Blogs.Post": "fas fa-pen-nib",
-        "mainpages":"far fa-file",
-        "mainpages.ChangelogsModel":"fas fa-sync-alt rotate-circular",
-        "mainpages.ContactForm":"fas fa-envelope-open-text"
+    'icons': {
+        'auth': 'fas fa-users-cog',
+        'auth.user': 'fas fa-user',
+        'auth.Group': 'fas fa-users',
+        'Blogs': 'far fa-file-alt',
+        'Blogs.Post': 'fas fa-pen-nib',
+        'mainpages':'far fa-file',
+        'mainpages.ChangelogsModel':'fas fa-sync-alt rotate-circular',
+        'mainpages.ContactForm':'fas fa-envelope-open-text'
     },
 
     #############
@@ -231,11 +236,11 @@ JAZZMIN_SETTINGS = {
     #############
 
     # Relative paths to custom CSS/JS scripts (must be present in static files)
-    "custom_css": "css/stylesheet.css",
-    "custom_js": None,
+    'custom_css': 'css/stylesheet.css',
+    'custom_js': None,
 
     # Whether to show the UI customizer on the sidebar
-    "show_ui_builder": False,
+    'show_ui_builder': False,
 
 
     ###############
@@ -247,58 +252,59 @@ JAZZMIN_SETTINGS = {
     # - vertical_tabs
     # - collapsible
     # - carousel
-    "changeform_format": "horizontal_tabs",
+    'changeform_format': 'horizontal_tabs',
 
     # Render django related popups inside a modal using
-    "related_modal_active": True
+    'related_modal_active': True
 }
 
 JAZZMIN_UI_TWEAKS={
-    "footer_small_text": False,
-    "body_small_text": False,
-    "brand_small_text": False,
-    "brand_colour": False,
-    "accent": "accent-primary",
-    "navbar": "navbar-white navbar-light",
-    "no_navbar_border": False,
-    "navbar_fixed": True,
-    "layout_boxed": False,
-    "footer_fixed": False,
-    "sidebar_fixed": True,
-    "sidebar": "sidebar-light-primary",
-    "sidebar_nav_small_text": False,
-    "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": False,
-    "sidebar_nav_compact_style": False,
-    "sidebar_nav_legacy_style": False,
-    "sidebar_nav_flat_style": False,
-    "theme": "default",
-    # "dark_mode_theme": None,
-    "button_classes": {
-        "primary": "btn-outline-primary",
-        "secondary": "btn-outline-secondary",
-        "info": "btn-outline-info",
-        "warning": "btn-outline-warning",
-        "danger": "btn-outline-danger",
-        "success": "btn-outline-success"
+    'footer_small_text': False,
+    'body_small_text': False,
+    'brand_small_text': False,
+    'brand_colour': False,
+    'accent': 'accent-primary',
+    'navbar': 'navbar-white navbar-light',
+    'no_navbar_border': False,
+    'navbar_fixed': True,
+    'layout_boxed': False,
+    'footer_fixed': False,
+    'sidebar_fixed': True,
+    'sidebar': 'sidebar-light-primary',
+    'sidebar_nav_small_text': False,
+    'sidebar_disable_expand': False,
+    'sidebar_nav_child_indent': False,
+    'sidebar_nav_compact_style': False,
+    'sidebar_nav_legacy_style': False,
+    'sidebar_nav_flat_style': False,
+    'theme': 'default',
+    # 'dark_mode_theme': None,
+    'button_classes': {
+        'primary': 'btn-outline-primary',
+        'secondary': 'btn-outline-secondary',
+        'info': 'btn-outline-info',
+        'warning': 'btn-outline-warning',
+        'danger': 'btn-outline-danger',
+        'success': 'btn-outline-success'
     },
-    "actions_sticky_top": True
+    'actions_sticky_top': True
 }
 # yapf: enable
 
-# CKEitor Configurations
-
+# ! CKEitor Configurations
+# ? images upload path
 CKEDITOR_UPLOAD_PATH = 'uploads/'
+# ? whether store in date styled directory or not
 CKEDITOR_RESTRICT_BY_DATE = False
 # CKEDITOR_BROWSE_SHOW_DIRS = True
 
 #yapf: disable
 CKEDITOR_CONFIGS = {
     'default': {
-        'width':'100%',
-        'height':'500px',
-        'skin':'bootstrapck',
-        'toolbar':'custom',
+        'width': '100%',
+        'height': '500px',
+        'skin': 'bootstrapck',
+        'toolbar': 'custom',
         'toolbar_custom': [
             [ 'Styles', 'Format', 'Font', 'FontSize' ],
             [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ],
@@ -381,7 +387,7 @@ CKEDITOR_CONFIGS = {
             },
         ],
         'removePlugins': ','.join(['exportpdf', ]),
-        "contentsCss": (STATIC_URL+'css/soft-design-system.min.css', STATIC_URL+'css/stylesheet.css'),
+        'contentsCss': (STATIC_URL+'css/soft-design-system.min.css', STATIC_URL+'css/stylesheet.css'),
 
     },
 }
