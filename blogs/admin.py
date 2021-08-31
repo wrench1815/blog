@@ -8,4 +8,3 @@ from .models import Post
 class PostAdmin(admin.ModelAdmin):
     '''Admin View for Post'''
     list_display = ['title', 'date_posted']
-
