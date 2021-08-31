@@ -1,7 +1,8 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from django.urls import reverse
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.models import User
 from .models import ChangelogsModel, ContactForm
 
 
@@ -10,7 +11,10 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'mainpages/about.html')
+    site_owner = User.objects.filter(username__exact='wrench1815').first()
+
+    context = {'site_owner': site_owner}
+    return render(request, 'mainpages/about.html', context)
 
 
 def contactMe(request):
@@ -31,17 +35,3 @@ class ContactForm(SuccessMessageMixin, CreateView):
 
     def get_success_url(self):
         return reverse('contactMe')
-
-
-# def contactform(request):
-#     if request.method == 'POST':
-#         full_name = request.POST['full_name']
-#         email = request.POST['email']
-#         message = request.POST['message']
-
-#         contact_form = ContactForm(full_name=full_name,
-#                                    email=email,
-#                                    message=message)
-#         contact_form.save()
-
-#     return redirect('contactMe')

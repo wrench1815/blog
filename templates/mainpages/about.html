@@ -21,11 +21,11 @@
             <div class="row">
               <div class="col-lg-3 col-md-5 position-relative my-auto">
                 <img class=" img border-radius-lg max-width-200 w-100 position-relative z-index-2"
-                  src="{% static 'images/wrench-avatar.png' %}" alt="bruce" />
+                  src="{{ site_owner.profile.profile_image.url }}" alt="{{ site_owner.username }}'s Profile Image" />
               </div>
               <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h4 class="mb-0">wrench1815</h4>
+                  <h4 class="mb-0">{{ site_owner.username }}</h4>
                 </div>
                 <div class="row mb-4">
                   <!-- Github link -->
@@ -72,7 +72,7 @@
 
 <!-- site motive -->
 <section class="container">
-
+  
 </section>
 <!-- site motive end -->
 
