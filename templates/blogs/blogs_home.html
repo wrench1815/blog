@@ -26,7 +26,7 @@
                         <img
                           class="img-fluid border-radius-lg img-4-3"
                           src="{{ post.featured_image.url }}"
-                          alt="post Featured Image"
+                          alt="{{ post.title }} Featured Image"
                       /></a>
                     </div>
                   </div>
@@ -44,7 +44,6 @@
                   </h4>
                   <p>
                     {{ post.excerpt }}
-                    <span class="text-gradient text-primary">....</span>
                     <br />
                     <a
                       href="{% url 'blogs-post-detail' post.slug post.id %}"
@@ -61,8 +60,8 @@
                   </p>
                   <div class="author">
                     <img
-                      src="{% static 'images/wrench-avatar.png' %}"
-                      alt="team-4"
+                      src="{{ post.author.profile.profile_image.url }}"
+                      alt="{{ post.author }}'s Profile Image"
                       class="avatar avatar-sm shadow me-2 rounded-circle"
                     />
                     <p class="my-auto">

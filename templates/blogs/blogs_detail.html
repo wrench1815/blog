@@ -10,7 +10,8 @@
   <div class="page-header section-height-100">
     {% comment %} Not Visible on Screen Size sm {% endcomment %}
 
-    <div class="
+    <div
+      class="
         position-absolute
         border-radius-lg
         border-top-start-radius-0
@@ -22,18 +23,23 @@
         h-100
         z-index-0
         d-none d-sm-block
-      " style="
+      "
+      style="
         background-image: url('{{ post.featured_image.url }}');
         background-size: cover;
         background-position: center;
-      "></div>
+      "
+      role="img"
+      alt="{{ post.title }} Featured Image"
+    ></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-7 d-flex justify-content-center flex-column">
           {% comment %} Visible only on Screen size sm {% endcomment %}
 
           <div class="d-block d-sm-none">
-            <img class="
+            <img
+              class="
                 img-fluid
                 mt-7
                 border-radius-xl
@@ -41,26 +47,47 @@
                 border-radius-bottom-start-0
                 shadow-3
                 img-16-9
-              " src="{{ post.featured_image.url }}" alt="" />
-            <div class="
+              "
+              src="{{ post.featured_image.url }}"
+              alt="{{ post.title }} Featured Image"
+            />
+            <div
+              class="
                 card card-body
                 border-radius-top-end-0 border-radius-top-start-0
                 shadow-3
-              ">
+              "
+            >
               <h1 class="text-gradient text-primary mb-4">{{ post.title }}</h1>
               <p class="lead pe-sm-5 me-sm-5">{{ post.post_tagline }}</p>
               <div class="mt-3 h6">
-                By
-                <span class="text-gradient text-primary">{{ post.author }}</span>
-                on
-                <span class="text-gradient text-primary">{{ post.date_posted|date:"j F, Y" }}</span>
+                <div>
+                  By
+                  <span
+                    ><img
+                      src="{{ post.author.profile.profile_image.url }}"
+                      alt="{{ post.author }}'s Profile Image"
+                      class="avatar avatar-sm shadow me-2 rounded-circle"
+                  /></span>
+                  <span class="text-gradient text-primary"
+                    >{{ post.author }}</span
+                  >
+                </div>
+
+                <div>
+                  on
+                  <span class="text-gradient text-primary"
+                    >{{ post.date_posted|date:"j F, Y" }}</span
+                  >
+                </div>
               </div>
             </div>
           </div>
 
           {% comment %} Not Visible on Screen Size sm {% endcomment %}
 
-          <div class="
+          <div
+            class="
               card card-body
               blur
               d-flex
@@ -71,14 +98,23 @@
               py-5
               rellax
               d-none d-sm-block
-            ">
+            "
+          >
             <h1 class="text-gradient text-primary mb-4">{{ post.title }}</h1>
             <p class="lead pe-sm-5 me-sm-5">{{ post.post_tagline }}</p>
             <div class="mt-3 h5">
               By
+              <span
+                ><img
+                  src="{{ post.author.profile.profile_image.url }}"
+                  alt="{{ post.author }}'s Profile Image"
+                  class="avatar avatar-sm shadow me-2 rounded-circle"
+              /></span>
               <span class="text-gradient text-primary">{{ post.author }}</span>
               on
-              <span class="text-gradient text-primary">{{ post.date_posted|date:"j F, Y" }}</span>
+              <span class="text-gradient text-primary"
+                >{{ post.date_posted|date:"j F, Y" }}</span
+              >
             </div>
           </div>
         </div>
