@@ -14,5 +14,4 @@ __pycache__/
 statics/
 
 # ignored images folder from media
-featured_images/
-uploads/
+media/
