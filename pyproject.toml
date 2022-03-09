@@ -5,7 +5,7 @@ description = "My Personal Blog"
 authors = ["wrench1815 <hardeepkumar1815@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 Django = "^3.2.12"
 yapf = "^0.30.0"
 python-dotenv = "^0.15.0"
