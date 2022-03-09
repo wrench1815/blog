@@ -7,4 +7,4 @@ from .models import Post
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     '''Admin View for Post'''
-    list_display = ['title', 'date_posted']
+    list_display = ['title','author', 'date_posted']

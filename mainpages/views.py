@@ -5,9 +5,16 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.models import User
 from .models import ChangelogsModel, ContactForm
 
+from blogs.models import Post
+
 
 def home(request):
-    return render(request, 'mainpages/home.html')
+    featured_posts = Post.objects.all().order_by('date_posted')[:4]
+
+    print(featured_posts)
+
+    context = {'featured_posts': featured_posts}
+    return render(request, 'mainpages/home.html', context)
 
 
 def about(request):

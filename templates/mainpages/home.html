@@ -86,75 +86,49 @@
 <!-- Recommended Section -->
 <section class="my-5 py-5">
   <div class="container">
+    <h2 class="text-primary text-gradient text-center">Featured Blog Posts</h2>
     <div class="row align-items-center">
       <div class="col-lg-6 ms-auto">
         <div class="row justify-content-left">
-          <!-- Post 1 -->
-          <div class="col-md-6 mt-3">
+          {% for post in featured_posts %}
+
+          <div class="col-md-6 mt-5">
             <div class="info">
-              <div class="card-body bg-white border border-primary rounded-3">
-                <h5 class="card-title">Post 1</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Impedit quia aliquam voluptate labore sapiente accusamus vel
-                  maiores, nisi repellendus temporibus perferendis officia
-                </p>
-                <a type="button" class="btn btn-round bg-gradient-primary"
-                  >read more <span><i class="fas fa-angle-right"></i></span
-                ></a>
+              <div
+                class="
+                  card card-body
+                  bg-white
+                  rounded-6
+                  border border-primary
+                  shadow-blur
+                "
+              >
+                <div class="card-img ratio-4-3 mt-n5 img-hover-zoom">
+                  <a href="{% url 'blogs-post-detail' post.slug post.id %}">
+                    <img
+                      src="{{ post.featured_image.url }}"
+                      class="img-fluid rounded-8"
+                      alt="Featured Image"
+                    />
+                  </a>
+                </div>
+                <h4 class="my-2">
+                  <a
+                    href="{% url 'blogs-post-detail' post.slug post.id  %}"
+                    class="text-dark"
+                    >{{ post.title }}</a
+                  >
+                </h4>
+                <p class="card-text">{{ post.excerpt }}</p>
+                <div class="d-flex">
+                  <a class="btn btn-round bg-gradient-primary"
+                    >read more <span><i class="fas fa-angle-right"></i></span
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Post 2 -->
-          <div class="col-md-6 mt-3">
-            <div class="info">
-              <div class="card-body bg-white border border-primary rounded-3">
-                <h5 class="card-title">Post 2</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Impedit quia aliquam voluptate labore sapiente accusamus vel
-                  maiores, nisi repellendus temporibus perferendis officia
-                </p>
-                <a type="button" class="btn btn-round bg-gradient-primary"
-                  >read more <span><i class="fas fa-angle-right"></i></span
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-left">
-          <!-- Post 3 -->
-          <div class="col-md-6 mt-3">
-            <div class="info">
-              <div class="card-body bg-white border border-primary rounded-3">
-                <h5 class="card-title">Post 3</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Impedit quia aliquam voluptate labore sapiente accusamus vel
-                  maiores, nisi repellendus temporibus perferendis officia
-                </p>
-                <a type="button" class="btn btn-round bg-gradient-primary"
-                  >read more <span><i class="fas fa-angle-right"></i></span
-                ></a>
-              </div>
-            </div>
-          </div>
-          <!-- Post 4 -->
-          <div class="col-md-6 mt-3">
-            <div class="info">
-              <div class="card-body bg-white border border-primary rounded-3">
-                <h5 class="card-title">Post 4</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Impedit quia aliquam voluptate labore sapiente accusamus vel
-                  maiores, nisi repellendus temporibus perferendis officia
-                </p>
-                <a type="button" class="btn btn-round bg-gradient-primary"
-                  >read more <span><i class="fas fa-angle-right"></i></span
-                ></a>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
 
