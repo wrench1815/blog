@@ -88,26 +88,18 @@
   <div class="container">
     <h2 class="text-primary text-gradient text-center">Featured Blog Posts</h2>
     <div class="row align-items-center">
-      <div class="col-lg-6 ms-auto">
+      <div class="col-lg-7 ms-auto">
         <div class="row justify-content-left">
           {% for post in featured_posts %}
 
           <div class="col-md-6 mt-5">
             <div class="info">
-              <div
-                class="
-                  card card-body
-                  bg-white
-                  rounded-6
-                  border border-primary
-                  shadow-blur
-                "
-              >
-                <div class="card-img ratio-4-3 mt-n5 img-hover-zoom">
+              <div class="card card-body bg-white rounded-6 shadow-blur">
+                <div class="card-img mt-n5 img-hover-zoom">
                   <a href="{% url 'blogs-post-detail' post.slug post.id %}">
                     <img
                       src="{{ post.featured_image.url }}"
-                      class="img-fluid rounded-8"
+                      class="img-fluid rounded-8 img-4-3"
                       alt="Featured Image"
                     />
                   </a>
